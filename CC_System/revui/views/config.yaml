@@ -1,0 +1,26 @@
+result_roots:
+  - "./results"
+  - "./demo_results"
+result_patterns:
+  - "{stem}_pred"
+  - "results/{stem}"
+manifest: "./manifest.csv"
+
+labels: ["ASCUS", "LSIL", "HSIL+", "Normal"]
+
+palette:
+  ASCUS: "#E09F3E"
+  LSIL:  "#3A86FF"
+  HSIL+: "#D62828"
+  Normal: "#6A994E"
+
+thumbnail:
+  size: 144
+  grid_cols: 6
+  page_size: 200
+
+io:
+  concurrent_reads: 8
+  default_export_dir: "./exports"
+
+slide_tag_priority: ["MIL", "Global", "Detection"]
